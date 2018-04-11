@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraint_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black">
+
+        <android.support.constraint.Guideline
+            android:id="@+id/planet_separator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.9"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Close"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="parent" />
+
+        <ImageView
+            android:id="@+id/info_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:src="@drawable/earth" />
+
+        <TextView
+            android:id="@+id/info_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="24dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:text="Earth" />
+
+        <TextView
+            android:id="@+id/info_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:visibility="gone"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintTop_toBottomOf="parent"
+            tools:text="Bla bla bla bla bla bla" />
+
+        <ImageView
+            android:id="@+id/sun"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:src="@drawable/sun"
+            app:layout_constraintBottom_toTopOf="@+id/planet_separator"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/earth"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/earth"
+            app:layout_constraintCircle="@+id/sun"
+            app:layout_constraintCircleAngle="45"
+            app:layout_constraintCircleRadius="80dp" />
+
+        <ImageView
+            android:id="@+id/mars"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/mars"
+            app:layout_constraintCircle="@+id/sun"
+            app:layout_constraintCircleAngle="180"
+            app:layout_constraintCircleRadius="120dp" />
+
+        <TextView
+            android:id="@+id/click_advice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click a planet to see more information"
+            android:textColor="@android:color/white"
+            app:layout_constrainedHeight="true"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/planet_separator" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
