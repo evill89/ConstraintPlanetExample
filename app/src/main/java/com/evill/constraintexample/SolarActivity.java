@@ -2,17 +2,14 @@ package com.evill.constraintexample;
 
 import android.animation.ValueAnimator;
 import android.databinding.DataBindingUtil;
+import android.os.Bundle;
 import android.support.constraint.ConstraintLayout;
 import android.support.constraint.ConstraintSet;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.transition.AutoTransition;
 import android.transition.ChangeBounds;
 import android.transition.Transition;
-import android.transition.TransitionListenerAdapter;
 import android.transition.TransitionManager;
 import android.view.View;
-import android.view.animation.AnticipateInterpolator;
 import android.view.animation.AnticipateOvershootInterpolator;
 import android.view.animation.LinearInterpolator;
 import android.widget.ImageView;
